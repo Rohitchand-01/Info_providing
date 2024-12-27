@@ -1,72 +1,35 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
     return (
-        <header className="bg-purple-900 text-white shadow-md sticky top-0 z-50">
-            <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-                {/* Logo/Brand Name */}
-                <Link to="/" className="text-3xl font-bold text-white">
-                    MyWebsite
-                </Link>
-
-                {/* Navigation Links */}
-                <nav className="hidden md:flex space-x-6">
-                    <Link to="/" className="hover:text-green-500 transition-all duration-300">
-                        Home
-                    </Link>
-                    <Link to="/explore" className="hover:text-green-500 transition-all duration-300">
-                        Explore
-                    </Link>
-                    <Link to="/about" className="hover:text-green-500 transition-all duration-300">
-                        About
-                    </Link>
-                    <Link to="/contact" className="hover:text-green-500 transition-all duration-300">
-                        Contact
-                    </Link>
-                </nav>
-
-                {/* Mobile Menu Button */}
-                <button
-                    className="md:hidden text-white"
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        strokeWidth="2"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M4 6h16M4 12h16M4 18h16"
-                        />
-                    </svg>
-                </button>
-            </div>
-
-            {/* Mobile Menu */}
+        <header className="bg-gray-800 text-white p-4">
+            <nav className="flex justify-between items-center">
+                <Link to="/" className="text-xl font-bold">My Website</Link>
+                <div className="hidden sm:flex space-x-6">
+                    <Link to="/" className="hover:text-orange-400 transition-all">Home</Link>
+                    <Link to="/about" className="hover:text-orange-400 transition-all">About</Link>
+                    <Link to="/contact" className="hover:text-orange-400 transition-all">Contact</Link>
+                    <Link to="/explore" className="hover:text-orange-400 transition-all">Explore</Link>
+                </div>
+                <div className="sm:hidden">
+                    <button onClick={toggleMobileMenu} className="text-white">
+                        ☰
+                    </button>
+                </div>
+            </nav>
             {isMobileMenuOpen && (
-                <div className="md:hidden bg-purple-800 text-white py-4">
-                    <nav className="flex flex-col items-center space-y-4">
-                        <Link to="/" className="hover:text-green-500">
-                            Home
-                        </Link>
-                        <Link to="/explore" className="hover:text-green-500">
-                            Explore
-                        </Link>
-                        <Link to="/about" className="hover:text-green-500">
-                            About
-                        </Link>
-                        <Link to="/contact" className="hover:text-green-500">
-                            Contact
-                        </Link>
-                    </nav>
+                <div className="sm:hidden bg-gray-800 text-white p-4 space-y-4">
+                    <Link to="/" className="block hover:text-orange-400">Home</Link>
+                    <Link to="/about" className="block hover:text-orange-400">About</Link>
+                    <Link to="/contact" className="block hover:text-orange-400">Contact</Link>
+                    <Link to="/explore" className="block hover:text-orange-400">Explore</Link>
                 </div>
             )}
         </header>
