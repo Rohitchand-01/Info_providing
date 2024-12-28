@@ -15,8 +15,8 @@ const Header = () => {
                 <div className="hidden sm:flex space-x-6">
                     <Link to="/" className="hover:text-orange-400 transition-all">Home</Link>
                     <Link to="/about" className="hover:text-orange-400 transition-all">About</Link>
-                    <Link to="/contact" className="hover:text-orange-400 transition-all">Contact</Link>
                     <Link to="/explore" className="hover:text-orange-400 transition-all">Explore</Link>
+                    <Link to="/contact" className="hover:text-orange-400 transition-all">Contact</Link>
                 </div>
                 <div className="sm:hidden">
                     <button onClick={toggleMobileMenu} className="text-white">

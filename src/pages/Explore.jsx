@@ -1,10 +1,18 @@
+import { useNavigate } from 'react-router-dom';
+
 const Explore = () => {
+    const navigate = useNavigate(); // Hook for navigation
+
+    const handleExploreMore = () => {
+        navigate('/destinations'); // Navigate to the "destinations" page
+    };
+
     return (
         <div>
             {/* Hero Section */}
             <section
                 className="hero bg-cover bg-center h-96 flex items-center justify-center text-white"
-                style={{ backgroundImage: 'url("https://www.w3schools.com/w3images/mountains.jpg")' }}
+                style={{ backgroundImage: 'url("https://images.pexels.com/photos/7009468/pexels-photo-7009468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")' }}
             >
                 <h1 className="text-4xl sm:text-3xl md:text-5xl font-bold drop-shadow-lg">Explore the World</h1>
             </section>
@@ -18,7 +26,7 @@ const Explore = () => {
                 <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div className="bg-white shadow-lg rounded-lg overflow-hidden">
                         <img
-                            src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            src="https://images.pexels.com/photos/3069185/pexels-photo-3069185.jpeg?auto=compress&cs=tinysrgb&w=600"
                             alt="Destination 1"
                             className="w-full h-48 object-cover"
                         />
@@ -29,7 +37,7 @@ const Explore = () => {
                     </div>
                     <div className="bg-white shadow-lg rounded-lg overflow-hidden">
                         <img
-                            src="https://images.pexels.com/photos/2977553/pexels-photo-2977553.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            src="https://images.pexels.com/photos/29921622/pexels-photo-29921622/free-photo-of-colorful-beach-umbrella-and-chairs-on-a-sunny-day.jpeg?auto=compress&cs=tinysrgb&w=600"
                             alt="Destination 2"
                             className="w-full h-48 object-cover"
                         />
@@ -40,7 +48,7 @@ const Explore = () => {
                     </div>
                     <div className="bg-white shadow-lg rounded-lg overflow-hidden">
                         <img
-                            src="https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            src="https://images.pexels.com/photos/29421926/pexels-photo-29421926/free-photo-of-cultural-market-scene-with-vendor-and-hanging-goods.jpeg?auto=compress&cs=tinysrgb&w=600"
                             alt="Destination 3"
                             className="w-full h-48 object-cover"
                         />
@@ -56,7 +64,12 @@ const Explore = () => {
             <section className="py-16 bg-gray-100 text-center">
                 <h2 className="text-3xl sm:text-2xl font-semibold text-gray-800">Start Your Journey</h2>
                 <p className="mt-4 text-lg sm:text-base text-gray-600">Your next adventure is waiting. Explore more destinations and create unforgettable memories.</p>
-                <button className="mt-8 bg-blue-500 text-white px-6 py-3 rounded-lg text-lg">Explore More</button>
+                <button
+                    className="mt-8 bg-blue-500 text-white px-6 py-3 rounded-lg text-lg"
+                    onClick={handleExploreMore} // Attach the click handler
+                >
+                    Explore More
+                </button>
             </section>
         </div>
     );
