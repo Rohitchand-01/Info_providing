@@ -40,7 +40,7 @@ const Explore = () => {
                     </div>
                     <div className="bg-white shadow-lg rounded-lg overflow-hidden">
                         <img
-                            src="https://images.pexels.com/photos/1080724/pexels-photo-1080724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            src="https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=600"
                             alt="Destination 3"
                             className="w-full h-48 object-cover"
                         />

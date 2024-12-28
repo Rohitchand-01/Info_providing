@@ -3,7 +3,7 @@ const Home = () => {
         <div>
             <section
                 className="hero bg-cover bg-center h-96 flex items-center justify-center text-white"
-                style={{ backgroundImage: 'url("https://www.w3schools.com/w3images/forest.jpg")' }}
+                style={{ backgroundImage: 'url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")' }}
             >
                 <h1 className="text-4xl sm:text-3xl md:text-5xl font-bold drop-shadow-lg">Welcome to My Website</h1>
             </section>
@@ -16,7 +16,7 @@ const Home = () => {
                     <iframe
                         width="100%"
                         height="315"
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                        src="https://www.youtube.com/embed/BHACKCNDMW8"
                         title="YouTube video player"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
