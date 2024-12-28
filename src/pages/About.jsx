@@ -48,7 +48,7 @@ const About = () => {
                 </p>
                 <button
                     className="mt-8 bg-white text-blue-500 px-6 py-3 rounded-lg text-lg hover:bg-gray-100 transition-colors duration-300"
-                    onClick={() => (window.location.href = "/contact")}
+                    onClick={() => navigate('/contact')}
                 >
                     Contact Us
                 </button>
