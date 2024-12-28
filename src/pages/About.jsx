@@ -1,6 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const About = () => {
+    const navigate = useNavigate(); // Initialize navigate function
+
     return (
         <div>
             {/* Hero Section */}
@@ -48,7 +51,7 @@ const About = () => {
                 </p>
                 <button
                     className="mt-8 bg-white text-blue-500 px-6 py-3 rounded-lg text-lg hover:bg-gray-100 transition-colors duration-300"
-                    onClick={() => navigate('/contact')}
+                    onClick={() => navigate('/contact')} // Use navigate function here
                 >
                     Contact Us
                 </button>
@@ -58,4 +61,3 @@ const About = () => {
 };
 
 export default About;
-
